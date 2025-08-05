@@ -1,7 +1,8 @@
+import Header  from './Header';
 function App() {
   return (
     <div>
-      <h1>react template working</h1>
+      <Header />
     </div>
   );
 }
