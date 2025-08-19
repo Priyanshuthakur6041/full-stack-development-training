@@ -137,8 +137,8 @@ app.delete('/delete-account', async (req, res) => {
     let userAccountNo = req.query.accountNo;
     console.log(`delete accountNo ${userAccountNo}}`)
     let result = await db.collection('account').deleteOne({ accountNo: userAccountNo })
-    if (result.deletedCount == 0) {
+    if (result.deletedCount == 0) {/
         res.status(404).json({ msg: 'account not found' })
     }
     res.status(201).json({ msg: 'account deleted successfully' })
-})
+}) 
