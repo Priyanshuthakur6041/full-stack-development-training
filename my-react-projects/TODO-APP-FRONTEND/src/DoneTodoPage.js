@@ -16,7 +16,7 @@ function DoneTodoPage(props) {
                todo.status === "completed"&&( 
                   <tr key={todo.id} className="bg-white even:bg-green-50 hover:bg-green-100 transition">
                     <td >{todo.todoTitle}</td>
-                    <td >{todo.completedDate.toLocaleDateString()}</td>
+                    <td >{new Date(todo.completionDate).toLocaleDateString()}</td>
                   </tr>
                 )
               )
